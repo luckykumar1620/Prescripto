@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { AppContext } from '../context/AppContext';
 import { assets } from '../assets/assets';
-import Speciality from '../components/Speciality';
 import RelatedDoctors from '../components/RelatedDoctors';
 
 const Appointment = () => {
@@ -39,7 +38,7 @@ const Appointment = () => {
 
         //setting hours
         if(today.getDate()===currentDate.getDate()){
-          currentDate.setHours(currentDate.getHours()>10?currentDate.getHours+1:10);
+          currentDate.setHours(currentDate.getHours()>10?currentDate.getHours()+1:10);
           currentDate.setMinutes(currentDate.getMinutes()>30?30:0);
         }else{
           currentDate.setHours(10);
